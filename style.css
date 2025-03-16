@@ -19,8 +19,8 @@ p {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row for larger screens */
-    gap: 15px; /* Spacing between items */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktops */
+    gap: 15px; /* Space between grid items */
     padding: 20px;
 }
 
@@ -30,26 +30,27 @@ p {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .grid-item img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 80%; /* Images now take up only 80% of their container width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional: Rounded image corners */
+    margin: 0 auto; /* Center the images */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Stack grid items vertically on smaller screens */
+        grid-template-columns: 1fr; /* Stack items for mobile view */
     }
 
     h1 {
-        font-size: 2rem; /* Reduce header size */
+        font-size: 2rem; /* Adjust header size for tablets */
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph size */
+        font-size: 1rem; /* Adjust paragraph text size */
     }
 }
