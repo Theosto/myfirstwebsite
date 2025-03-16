@@ -20,7 +20,7 @@ p {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktop */
-    gap: 15px; /* Spacing between grid items */
+    gap: 15px;
     padding: 20px;
 }
 
@@ -29,14 +29,14 @@ p {
     text-align: center;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-.grid-item:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+.grid-item img {
+    max-width: 100%; /* Image fits within the grid item */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 5px; /* Optional: Rounded image corners */
 }
 
 /* Responsive Design */
@@ -46,10 +46,10 @@ p {
     }
 
     h1 {
-        font-size: 2rem; /* Adjust header size for tablets */
+        font-size: 2rem;
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph text size */
+        font-size: 1rem;
     }
 }
