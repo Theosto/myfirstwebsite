@@ -6,15 +6,6 @@ body {
     text-align: center; /* Centers text horizontally */
 }
 
-.center-content {
-    background-color: #ffffff; /* White background for the content block */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    display: inline-block; /* Ensures content adjusts to its size */
-    margin: 20px auto 0; /* Positions content at the top with some spacing */
-}
-
 h1 {
     font-size: 2.5rem;
     color: #333;
@@ -28,8 +19,8 @@ p {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 15px; /* Increased spacing for a more open look */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktop */
+    gap: 15px; /* Spacing between grid items */
     padding: 20px;
 }
 
@@ -48,25 +39,14 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-.grid-item h3 {
-    color: #333; /* Text color for headings */
-    margin-bottom: 10px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Stack items vertically for very small screens */
+        grid-template-columns: 1fr; /* Single column for smaller screens */
     }
 
     h1 {
-        font-size: 2rem; /* Adjust header size for smaller devices */
+        font-size: 2rem; /* Adjust header size for tablets */
     }
 
     p {
