@@ -7,9 +7,15 @@ body {
 }
 
 h1 {
-    font-size: 3rem; /* Larger header text */
+    font-size: 4rem; /* Larger title */
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 2rem; /* Subtitle below the title */
+    color: #444;
+    margin-bottom: 30px;
 }
 
 p {
@@ -20,7 +26,7 @@ p {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 items per row for larger screens */
-    gap: 20px; /* Spacing between grid items */
+    gap: 20px; /* Space between items */
     padding: 20px;
 }
 
@@ -31,37 +37,50 @@ p {
     border: 1px solid #ddd;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    height: 400px; /* Uniform height for all boxes */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Space out content within the box */
 }
 
 .grid-item img {
-    max-width: 100%; /* Image scales within container */
-    height: 200px; /* Fixed height to ensure all images are the same size */
-    object-fit: cover; /* Ensures images maintain aspect ratio and fill their space */
+    width: 100%; /* Uniform image width */
+    max-width: 250px; /* Restrict maximum size */
+    height: 200px; /* Uniform image height */
+    object-fit: cover; /* Crop images to fit the box while maintaining aspect ratio */
+    margin: 0 auto; /* Center the image */
     border-radius: 5px; /* Optional: Rounded image corners */
-    margin: 0 auto; /* Center the images */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Stack items for smaller screens */
+        grid-template-columns: 1fr; /* Stack items vertically for smaller screens */
     }
 
     h1 {
-        font-size: 2.5rem; /* Adjust header size for tablets */
+        font-size: 3rem; /* Adjust title size for tablets */
+    }
+
+    p.subtitle {
+        font-size: 1.8rem; /* Adjust subtitle size for tablets */
     }
 
     p {
-        font-size: 1.2rem; /* Adjust paragraph text size for tablets */
+        font-size: 1.2rem; /* Adjust paragraph size for tablets */
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem; /* Smaller header size for mobile */
+        font-size: 2.5rem; /* Smaller title for mobile */
+    }
+
+    p.subtitle {
+        font-size: 1.5rem; /* Smaller subtitle for mobile */
     }
 
     p {
-        font-size: 1rem; /* Smaller paragraph text size for mobile */
+        font-size: 1rem; /* Smaller paragraph size for mobile */
     }
 }
