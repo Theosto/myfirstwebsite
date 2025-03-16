@@ -7,20 +7,20 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Larger header text */
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Larger paragraph text */
     color: #555;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktops */
-    gap: 15px; /* Space between grid items */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for larger screens */
+    gap: 20px; /* Spacing between grid items */
     padding: 20px;
 }
 
@@ -34,8 +34,9 @@ p {
 }
 
 .grid-item img {
-    max-width: 80%; /* Images now take up only 80% of their container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Image scales within container */
+    height: 200px; /* Fixed height to ensure all images are the same size */
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill their space */
     border-radius: 5px; /* Optional: Rounded image corners */
     margin: 0 auto; /* Center the images */
 }
@@ -43,14 +44,24 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Stack items for mobile view */
+        grid-template-columns: 1fr; /* Stack items for smaller screens */
     }
 
     h1 {
-        font-size: 2rem; /* Adjust header size for tablets */
+        font-size: 2.5rem; /* Adjust header size for tablets */
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph text size */
+        font-size: 1.2rem; /* Adjust paragraph text size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Smaller header size for mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph text size for mobile */
     }
 }
