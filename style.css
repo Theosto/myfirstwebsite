@@ -1,0 +1,59 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #d4fc79, #96e6a1); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers text horizontally */
+}
+
+.center-content {
+    background-color: #ffffff; /* White background for the content block */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block; /* Ensures content adjusts to its size */
+    margin: 20px auto 0; /* Positions content at the top with some spacing */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 15px; /* Increased spacing for a more open look */
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #ffffff; /* White cards */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.grid-item h3 {
+    color: #333; /* Text color for headings */
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #555; /* Text color for paragraphs */
+    font-size: 14px;
+}
