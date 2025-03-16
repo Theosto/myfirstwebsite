@@ -53,7 +53,23 @@ p {
     margin-bottom: 10px;
 }
 
-.grid-item p {
-    color: #555; /* Text color for paragraphs */
-    font-size: 14px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items vertically for very small screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust header size for smaller devices */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph text size */
+    }
 }
